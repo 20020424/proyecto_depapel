@@ -1,0 +1,165 @@
+
+
+@font-face {
+  font-family: 'JustAnotherHand';
+  src: url('font/JustAnotherHand.ttf') format('ttf');
+  
+}
+
+
+body {
+    margin: 20px;
+    font-family: 'JustAnotherHand', monospace;
+    background-image: url('../img/fondo.jpg'); /* Imagen de fondo para la página */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+
+html, body {
+    min-width: 1024px; /* Ancho mínimo */
+    max-width: 1440px; /* Ancho máximo */
+    min-height: 600px; /* Altura mínima */
+    max-height: 900px; /* Altura máxima */
+    margin: 0 auto; /* Centrar horizontalmente en pantallas más grandes */
+}
+
+
+/* Estilos de la barra de navegación */
+.navbar {
+    
+    background-image: url('../img/navbar.png'); /* Imagen de fondo para la barra de navegación */
+    background-size: contain; /* Mantiene el tamaño original de la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el contenedor */
+    padding: 90px 90px;
+    color: white;
+}
+
+.navbar-content {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+/* Estilos de la lista de enlaces en la barra de navegación */
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    gap: 1px;
+}
+
+.navbar-menu ul{
+
+    display:inline-grid;
+    padding: 0px;
+    margin: 11px; 
+}
+
+.navbar-menu p{
+      
+    display:inline;
+    
+}
+
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 80px;
+    margin-right: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+
+.image-box {
+    position: flex;
+    width: 500px; /* Ancho de la caja */
+    height: 400px; /* Altura de la caja */
+    background-image: url('../img/cuadro.png'); /* Ruta de la imagen de fondo */
+    background-repeat: no-repeat;
+    background-size: contain; /* La imagen cubrirá toda la caja */
+    background-position: center; /* Centra la imagen en la caja */
+    margin-left: 1px; /* Ajusta la posición horizontal */
+    margin-top: 1px; /* Ajusta la posición vertical */
+    /*display: flex; /* Habilita la alineación del contenido interno */
+    /*align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    color: white; /* Color del texto */
+}
+
+
+
+.footer {
+    background-image: url('../img/footer5.png'); /* Imagen de fondo del footer */
+    background-size: cover; /* La imagen cubrirá todo el footer */
+    background-position: center; /* Centra la imagen en el footer */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 40px 3px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+}
+
+.sidebar {
+    position: absolute;
+    top: 340px; /* Ajusta la posición vertical según lo necesites */
+    right: 90px; /* Mantén la caja en el lado derecho */
+    width: 290px; /* Ancho fijo para la caja */
+    height: auto; /* La altura se ajusta al contenido */
+    background-image: url('../img/caja.jpg'); /* Imagen de fondo */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px;
+    color: white;
+    /*box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    /*border-radius: 1px; /* Opcional: da bordes redondeados a la caja */
+}
+
+/* Estilo del título y texto dentro de la caja */
+.sidebar h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.sidebar p {
+    margin-bottom: 0;
+}
+
+.icons {
+    
+    display: flex;
+    align-content: center;
+    gap: 50px;
+}
+
+.icons input[type="text"] {
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.icons .icon {
+    width: 50px; /* Ajusta el tamaño del icono según tu diseño */
+    height: 50px; /* Ajusta la altura también */
+    cursor: pointer; /* Opcional: Cambia el cursor al pasar sobre las imágenes */
+}

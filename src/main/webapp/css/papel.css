@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'JustAnotherHand';
+  src: url('font/JustAnotherHand.ttf') format('ttf');
+  
+}
+
+
+body {
+    margin: 20px;
+    font-family: 'JustAnotherHand', monospace;
+    background-image: url('img/fondo.jpg'); /* Imagen de fondo para la página */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+
+html, body {
+    min-width: 1024px; /* Ancho mínimo */
+    max-width: 1440px; /* Ancho máximo */
+    min-height: 600px; /* Altura mínima */
+    max-height: 900px; /* Altura máxima */
+    margin: 0 auto; /* Centrar horizontalmente en pantallas más grandes */
+}
+
+
+/* Estilos de la barra de navegación */
+.navbar {
+    
+    background-image: url('img/navbar.png'); /* Imagen de fondo para la barra de navegación */
+    background-size: contain; /* Mantiene el tamaño original de la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el contenedor */
+    padding: 90px 90px;
+    color: white;
+}
+
+.icons {
+    
+    display: flex;
+    align-content: center;
+    gap: 70px;
+}
+
+.icons input[type="text"] {
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.icons .icon {
+    width: 50px; /* Ajusta el tamaño del icono según tu diseño */
+    height: 50px; /* Ajusta la altura también */
+    cursor: pointer; /* Opcional: Cambia el cursor al pasar sobre las imágenes */
+}
+
+.navbar-content {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+/* Estilos de la lista de enlaces en la barra de navegación */
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    gap: 1px;
+}
+
+.navbar-menu ul{
+
+    display:inline-grid;
+    padding: 0px;
+    margin: 11px; 
+}
+
+.navbar-menu p{
+      
+    display:inline;
+    
+}
+
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 80px;
+    margin-right: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+.footer {
+    background-image: url('img/footer5.png'); /* Imagen de fondo del footer */
+    background-size: cover; /* La imagen cubrirá todo el footer */
+    background-position: center; /* Centra la imagen en el footer */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 40px 3px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+}
