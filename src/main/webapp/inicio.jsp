@@ -13,6 +13,7 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>DePapel</title>
 </head>
+
 <body>
     <nav class="navbar">
 
@@ -21,33 +22,33 @@
             <div class="navbar-menu">
                 <p>
                     <ul>
-                        <li><a href="<%= request.getContextPath() %>/productos">Todos los productos</a></li>
+                        <li><a href='todo_product.jsp' id='t'> Todos los productos &emsp;</a></li>
                         <br>
-                        <li><a href="<%= request.getContextPath() %>/productos/plumas">Plumas</a></li>
+                        <li><a href='plumas.jsp' id='p'> Plumas &emsp;</a></li>
                     </ul>
                 </p>
 
                 <p>
                     <ul>
-                        <li><a href="<%= request.getContextPath() %>/productos/lapices">Lápices</a></li>
+                        <li><a href='lapices.jsp' id='l'> Lapices &emsp;</a></li>
                         <br>
-                        <li><a href="<%= request.getContextPath() %>/productos/papel">Papel</a></li>
+                        <li><a href='papel.jsp' id='pa'> Papel &emsp;</a></li>
                     </ul> 
                 </p>
 
                 <p>
                     <ul>
-                        <li><a href="<%= request.getContextPath() %>/productos/marcadores">Marcadores</a></li>
+                        <li><a href='marcadores.jsp' id='m'> Marcadores &emsp;</a></li>
                         <br>
-                        <li><a href="<%= request.getContextPath() %>/productos/cuadernos">Cuadernos</a></li>
+                        <li><a href='cuadernos.jsp' id='c'> Cuadernos &emsp;</a></li>
                     </ul>
                 </p>
 
                 <p>
                     <ul>
-                        <li><a href="<%= request.getContextPath() %>/productos/pegamento">Pegamento</a></li>
+                        <li><a href='pegamento.jsp' id='pe'>Pegamento &emsp;</a></li>
                         <br>
-                        <li><a href="<%= request.getContextPath() %>/productos/oficina">Oficina</a></li>
+                        <li><a href='oficina.jsp' id='o'>Oficina &emsp;</a></li>
                     </ul>
                 </p>   
             </div>
