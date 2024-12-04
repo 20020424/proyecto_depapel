@@ -1,11 +1,17 @@
-
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    
+    Author     : Nancy Siqueiros
+*/
 
 @font-face {
   font-family: 'JustAnotherHand';
   src: url('../font/JustAnotherHand.ttf') format('ttf');
   
 }
-
 
 body {
     margin: 20px;
@@ -164,7 +170,6 @@ html, body {
     cursor: pointer; /* Opcional: Cambia el cursor al pasar sobre las imágenes */
 }
 
-
 /*Formulario de Inicio de Sesion*/
 
 #formulario {
@@ -222,7 +227,7 @@ html, body {
 }
 
 .modal-contenido {
-    background-image: url("../Imagenes/header.png");
+    background-image: url("../img/navbar.png");
     font-family: 'JustAnotherHand', monospace;
     color:white;
     text-shadow:2px 2px 0px #FEA808;

@@ -4,18 +4,25 @@
  */
 package Controllers;
 
+import Models.Users;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Nancy Siqueiros
  */
+
+import java.util.ArrayList;
+
 @WebServlet(name = "ControllerUsuario", urlPatterns = {"/ControllerUsuario"})
 public class ControllerUsuario extends HttpServlet {
 
@@ -28,20 +35,63 @@ public class ControllerUsuario extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    private static ArrayList<Users> usuarios;
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ControllerUsuario</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ControllerUsuario at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        
+        String action = request.getParameter("action");
+        
+        if ("logout".equals(action)) {
+            // Eliminar el atributo de sesión que contiene los usuarios
+            HttpSession session = request.getSession(false);
+            if (session != null) {
+                session.invalidate(); // Invalidar la sesión existente
+            }
+            response.sendRedirect("inicio.jsp");
+        } else if ("addUser".equals(action)) {
+            // Registro de usuario
+            String nombre = request.getParameter("nombre");
+            String fechaNacimiento = request.getParameter("fecha_nacimiento");
+            String correo = request.getParameter("email");
+            String contrasena = request.getParameter("contrasena");
+
+            // Asegurarse de que el ArrayList de usuarios esté inicializado
+            inicializarUsuarios();
+
+            // Agrega el nuevo usuario al ArrayList existente
+            usuarios = Users.agregaUsuario(usuarios, nombre, correo, contrasena, fechaNacimiento);
+
+            // Redirigir a index.jsp?correcto después de un registro exitoso
+            response.sendRedirect("inicio.jsp?correcto");
+        } else {
+            // Inicio de sesión
+            String correo = request.getParameter("email");
+            String pass = request.getParameter("contra1");
+
+            // Asegurarse de que el ArrayList de usuarios esté inicializado
+            inicializarUsuarios();
+
+            // Validar el usuario utilizando el ArrayList global
+            Users user = Users.validaUsuarioPorCorreo(usuarios, correo, pass);
+
+            if (user != null) {
+                // Autenticación exitosa, establecer el atributo de sesión "userName"
+                HttpSession session = request.getSession();
+                session.setAttribute("userName", user.getNombre());
+                response.sendRedirect("inicio.jsp?userName=" + user.getNombre());
+
+            } else {
+                // Autenticación fallida, redirigir con un parámetro de error
+                response.sendRedirect("inicio.jsp?error=1");
+            }
+        }
+        
+    }
+    
+    private void inicializarUsuarios() {
+        if (usuarios == null) {
+            usuarios = Users.inicializaUsuarios();
         }
     }
 

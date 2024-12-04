@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'JustAnotherHand';
-  src: url('font/JustAnotherHand.ttf') format('ttf');
+  src: url('../font/JustAnotherHand.ttf') format('ttf');
   
 }
 
@@ -8,7 +8,7 @@
 body {
     margin: 20px;
     font-family: 'JustAnotherHand', monospace;
-    background-image: url('img/fondo.jpg'); /* Imagen de fondo para la página */
+    background-image: url('../img/fondo.jpg'); /* Imagen de fondo para la página */
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -27,7 +27,7 @@ html, body {
 /* Estilos de la barra de navegación */
 .navbar {
     
-    background-image: url('img/navbar.png'); /* Imagen de fondo para la barra de navegación */
+    background-image: url('../img/navbar.png'); /* Imagen de fondo para la barra de navegación */
     background-size: contain; /* Mantiene el tamaño original de la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen en el contenedor */
@@ -61,6 +61,8 @@ html, body {
     align-items: center;
 
 }
+
+
 
 
 /* Estilos de la lista de enlaces en la barra de navegación */
@@ -108,7 +110,7 @@ html, body {
 
 
 .footer {
-    background-image: url('img/footer5.png'); /* Imagen de fondo del footer */
+    background-image: url('../img/footer5.png'); /* Imagen de fondo del footer */
     background-size: cover; /* La imagen cubrirá todo el footer */
     background-position: center; /* Centra la imagen en el footer */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -118,4 +120,154 @@ html, body {
     font-size: 12px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
 }
+
+#formulario {
+    text-align: center; 
+    margin: auto; 
+    width: 80%; 
+}
+#formulario {
+    text-align: center;
+    margin: auto; 
+    width: 80%; 
+    height: 80%; 
+    font-size: 25px;
+}
+
+#formulario input[type="email"],
+#formulario input[type="password"] {
+    width: 80%; 
+    height: 40px; 
+    margin-bottom: 20px; 
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+#formulario button {
+    width: 50%; 
+    height: 50px; 
+    border-radius: 10px;
+    background-color: #FEA808; 
+    color: white; 
+    font-size: 18px; 
+    border: none; 
+    cursor: pointer; 
+}
+
+#formulario button:hover {
+    background-color: #F19D00; 
+}
+
+#tienes{
+    font-family: arial;
+    text-shadow:none;
+    font-size:15px;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0; /* Sin borde redondeado */
+    object-fit: cover;
+    display: block; /* Asegura que la imagen no tenga espacio debajo */
+}
+
+.shop_section .box {
+ barra{
+    text-align: left;
+}   background-color: #eeeeee;
+    margin: 20px auto;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Ajusta la altura según sea necesario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra difuminada */
+    overflow: hidden; /* Para asegurar que la imagen no se salga del borde del div */
+    transition: transform 0.3s ease; /* Transición para el efecto de hover */
+    padding: 0; /* Sin padding para evitar espacios internos */
+    box-sizing: border-box; /* Incluye el borde y el padding en el tamaño total del elemento */
+    width: 80%; /* Ajusta el ancho según sea necesario */
+}
+
+.shop_section .box:hover {
+    transform: scale(1.05); /* Aumenta el tamaño del div al hacer hover */
+}
+
+.shop_section .box .img-box {
+    flex: 1; /* Ocupa la mitad superior del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Ajusta la altura de la imagen */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    padding: 0; /* Sin padding para evitar espacios internos */
+    margin: 0; /* Sin margen para evitar espacios internos */
+    box-sizing: border-box; /* Incluye el borde y el padding en el tamaño total del elemento */
+}
+
+.shop_section .box .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop_section .box .detail-box {
+    padding: 10px; /* Añade padding para separar el contenido del borde del div */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos dentro se apilen en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    box-sizing: border-box; /* Incluye el borde y el padding en el tamaño total del elemento */
+}
+
+.shop_section .box .detail-box h6 {
+    margin: 0;
+    color: #BC508F;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center; /* Centra el texto dentro de los divs */
+}
+
+.shop_section .box .detail-box p {
+    margin: 10px 0;
+    color: #666;
+    text-align: center; /* Centra el texto dentro de los divs */
+}
+
+.shop_section .box .detail-box button.add-to-cart {
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+    background-color: #BC508F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.shop_section .box .detail-box button.add-to-cart:hover {
+    background-color: #A0457C;
+}
+.btn-agregar-carrito {
+    background-color: orange; /* Cambia el color de fondo a naranja */
+    color: white; /* Cambia el color del texto a blanco */
+    padding: 5px 10px; /* Ajusta el relleno para hacer el botón un poco más pequeño */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Agrega un borde redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Agrega una transición suave al color de fondo */
+}
+
+.btn-agregar-carrito:hover {
+    background-color: #ff8c00; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+ 
+.modal-contenido img {
+    width: 200px; /* Establece el ancho deseado */
+    height: auto; /* Mantén la proporción de la imagen */
+}
+
+
 

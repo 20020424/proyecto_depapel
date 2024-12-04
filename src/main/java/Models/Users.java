@@ -9,7 +9,7 @@ package Models;
  * @author Nancy Siqueiros
  */
 
-import java.util.ArrayList;
+
 import java.util.HashSet;
 import java.util.Set;
 import java.util.ArrayList;
@@ -166,12 +166,16 @@ public class Users {
     }
     
     public static Users validaUsuarioPorCorreo(ArrayList<Users> usuarios, String correo, String pass) {
+        
     for (Users u : usuarios) {
         if (u.getCorreo().equals(correo) && u.getPwd().equals(pass)) {
             System.out.println("Usuario encontrado");
             return u;
         }
     }
+    
     return null;
-}
+    
+    }
+    
 }
